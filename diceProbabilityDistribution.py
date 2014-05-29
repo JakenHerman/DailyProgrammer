@@ -1,11 +1,11 @@
 ############################################################
 # Challenge 163: Probability Distribution of a 6-sided Die #
-#          Date: May 28, 2014                              #
+# Date: May 28, 2014 #
 ############################################################
 
 from random import randint
 
-t = "Rolls  1s     2s     3s     4s     5s     6s    "
+t = "Rolls      1s    2s       3s      4s       5s      6s   "
 print t
 print "="*len(t)
 
@@ -19,6 +19,6 @@ for rolls in [10**i for i in range(1,7)]:
         pct = num/rolls
         p.append("{:>6.2%}".format(pct))
 
-    row  = "{:<11d}".format(numRolls)
+    row = "{:<11d}".format(rolls)
     row += " ".join(p)
-    print row 
+    print row
